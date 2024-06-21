@@ -126,19 +126,36 @@
 
     <script>
         // JavaScript to handle the popup display
-        document.getElementById('openPopupBtn').addEventListener('click', function() {
-            document.getElementById('popup').style.display = 'block';
-            document.getElementById('overlay').style.display = 'block';
-        });
+        document.addEventListener('DOMContentLoaded', function() {
+            var openPopupBtn = document.getElementById('openPopupBtn');
+            var closePopupBtn = document.getElementById('closePopupBtn');
+            var overlay = document.getElementById('overlay');
+            var popup = document.getElementById('popup');
 
-        document.getElementById('closePopupBtn').addEventListener('click', function() {
-            document.getElementById('popup').style.display = 'none';
-            document.getElementById('overlay').style.display = 'none';
-        });
+            openPopupBtn.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default anchor click behavior
+                event.stopPropagation(); // Prevent the click event from propagating to other elements
+                popup.style.display = 'block';
+                overlay.style.display = 'block';
+            });
 
-        document.getElementById('overlay').addEventListener('click', function() {
-            document.getElementById('popup').style.display = 'none';
-            document.getElementById('overlay').style.display = 'none';
+            closePopupBtn.addEventListener('click', function(event) {
+                event.stopPropagation();
+                popup.style.display = 'none';
+                overlay.style.display = 'none';
+            });
+
+            overlay.addEventListener('click', function() {
+                popup.style.display = 'none';
+                overlay.style.display = 'none';
+            });
+
+            document.addEventListener('click', function(event) {
+                if (!popup.contains(event.target) && !openPopupBtn.contains(event.target)) {
+                    popup.style.display = 'none';
+                    overlay.style.display = 'none';
+                }
+            });
         });
     </script>
 
