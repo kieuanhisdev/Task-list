@@ -1,0 +1,96 @@
+"phone": {
+                required: true,
+                minlength: 10,
+                maxlength: 10,
+                digits: true,
+                regex: /^0/
+            }
+
+rules: {
+    email: {
+        required: true,
+        email: true
+    }
+},
+messages: {
+    email: {
+        required: "Bắt buộc nhập email",
+        email: "Email không hợp lệ"
+    }
+}
+
+rules: {
+    website: {
+        url: true
+    }
+},
+messages: {
+    website: {
+        url: "Địa chỉ URL không hợp lệ"
+    }
+}
+
+rules: {
+    birthday: {
+        date: true
+    }
+},
+messages: {
+    birthday: {
+        date: "Ngày sinh không hợp lệ"
+    }
+}
+
+rules: {
+    confirmPassword: {
+        equalTo: "#password"
+    }
+},
+messages: {
+    confirmPassword: {
+        equalTo: "Xác nhận mật khẩu không khớp"
+    }
+}
+
+rules: {
+    username: {
+        required: true,
+        remote: {
+            url: "check-username.php",
+            type: "post"
+        }
+    }
+},
+messages: {
+    username: {
+        required: "Bắt buộc nhập tên người dùng",
+        remote: "Tên người dùng đã tồn tại"
+    }
+}
+
+rules: {
+    username: {
+        required: true,
+        remote: {
+            url: "check-username.php",
+            type: "post"
+        }
+    }
+},
+messages: {
+    username: {
+        required: "Bắt buộc nhập tên người dùng",
+        remote: "Tên người dùng đã tồn tại"
+    }
+}
+
+rules: {
+    creditCardNumber: {
+        creditcard: true
+    }
+},
+messages: {
+    creditCardNumber: {
+        creditcard: "Số thẻ tín dụng không hợp lệ"
+    }
+}

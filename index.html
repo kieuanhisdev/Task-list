@@ -1,170 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/js/bootstrap.min.css" />
-    <link rel="stylesheet" href="./assets/fontawesome-free-6.5.2-web/css/all.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link
+      rel="stylesheet"
+      href="./assets/fontawesome-free-6.5.2-web/css/all.css"
+    />
+    <link rel="stylesheet" href="./assets/js/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <script src="./assets/js/jquery.min.js"></script>
     <script src="./assets/js/jquery.validate.min.js"></script>
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-    <nav class="navbar navbar-expand-sm navbar-light ">
-        <div class="container">
-            <a class="navbar-brand" href="#">Task List</a>
-                <form class="d-flex my-2 my-lg-0">
-                    <button class="btn btn-primary my-2 my-sm-0" id="openPopupBtn" type="submit">
-                        <i class="fa-plus fa-lg"></i> Add Task
-                    </button>
-                </form>
-            </div>
-        </div>
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">Task List</a>
+        <form class="d-flex my-2 my-lg-0">
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            <i class="fa-plus fa-lg"></i> Add Task
+          </button>
+        </form>
+      </div>
     </nav>
-    <div id="overlay" class="overlay"></div>
 
     <div class="container">
-        <div class="taskList row align-items-center">
-            <div class="task col-4">
-                <p>Task</p>
-                <span>Go to gym</span>
-            </div>
-            <div class="priority col-2">
-                <p >Priority</p>
-                <span style="color: red;">High</span>
-            </div>
-            <div class="status col-2">
-                <button type="button" class="btn btn-secondary">To Do</button>
-            </div>
-            <div class="icon col-2">
-                <i class="fas fa-circle-notch"></i>
-            </div>
-            <div class="button col-2">
-                <a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
-                <a href="#"><i class="fa-solid fa-trash"></i></a>
-            </div>
+      <div class="taskList row align-items-center">
+        <div class="task col-4">
+          <p>Task</p>
+          <span>Go to gym</span>
         </div>
+        <div class="priority col-2">
+          <p>Priority</p>
+          <span style="color: red">High</span>
+        </div>
+        <div class="status col-2">
+          <button type="button" class="btn btn-secondary">To Do</button>
+        </div>
+        <div class="icon col-2">
+          <i class="fas fa-circle-notch"></i>
+        </div>
+        <div class="button col-2">
+          <a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+          <a href="#"><i class="fa-solid fa-trash"></i></a>
+        </div>
+      </div>
 
-        <div class="taskList row align-items-center">
-            <div class="task col-4">
-                <p>Task</p>
-                <span>Read a book</span>
-            </div>
-            <div class="priority col-2">
-                <p>Priority</p>
-                <span style="color: green;">Low</span>
-            </div>
-            <div class="status col-2">
-                <button type="button" class="btn btn-secondary">Done</button>
-            </div>
-            <div class="icon col-2">
-                <i class="fas fa-circle-notch"></i>
-            </div>
-            <div class="button col-2">
-                <a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
-                <a href="#"><i class="fa-solid fa-trash"></i></a>
-            </div>
+      <div class="taskList row align-items-center">
+        <div class="task col-4">
+          <p>Task</p>
+          <span>Read a book</span>
         </div>
+        <div class="priority col-2">
+          <p>Priority</p>
+          <span style="color: green">Low</span>
+        </div>
+        <div class="status col-2">
+          <button type="button" class="btn btn-secondary">Done</button>
+        </div>
+        <div class="icon col-2">
+          <i class="fas fa-circle-notch"></i>
+        </div>
+        <div class="button col-2">
+          <a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+          <a href="#"><i class="fa-solid fa-trash"></i></a>
+        </div>
+      </div>
 
-        <div class="taskList row align-items-center">
-            <div class="task col-4">
-                <p>Task</p>
-                <span>Go to market</span>
-            </div>
-            <div class="priority col-2">
-                <p>Priority</p>
-                <span style="color: orange;">Medium</span>
-            </div>
-            <div class="status col-2">
-                <button type="button" class="btn btn-secondary">In Progress</button>
-            </div>
-            <div class="icon col-2">
-                <i class="fas fa-circle-notch"></i>
-            </div>
-            <div class="button col-2">
-                <a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
-                <a href="#"><i class="fa-solid fa-trash"></i></a>
-            </div>
+      <div class="taskList row align-items-center">
+        <div class="task col-4">
+          <p>Task</p>
+          <span>Go to market</span>
         </div>
+        <div class="priority col-2">
+          <p>Priority</p>
+          <span style="color: orange">Medium</span>
+        </div>
+        <div class="status col-2">
+          <button type="button" class="btn btn-secondary">In Progress</button>
+        </div>
+        <div class="icon col-2">
+          <i class="fas fa-circle-notch"></i>
+        </div>
+        <div class="button col-2">
+          <a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+          <a href="#"><i class="fa-solid fa-trash"></i></a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Add Task</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <form method="get" id="addTask">
+            <div class="modal-body">
+              <label for="" class="form-label">Task</label>
+              <input
+                type="text"
+                class="form-control"
+                name="text"
+                id=""
+                placeholder="Type your task here ..."
+              />
+              <label for="" class="form-label">Priority</label> <br />
+              <button type="button" class="btn btn-outline-danger">High</button>
+              <button type="button" class="btn btn-outline-warning">
+                Medium
+              </button>
+              <button type="button" class="btn btn-success">Low</button>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-secondary">Add</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
 
-    <div id="popup" class="popup">
-        <span id="closePopupBtn" class="close-btn">&times;</span>
-        <nav class="navbar navbar-expand-sm navbar-light">
-            <div class="container">
-                <a class="navbar-brand" href="#">Add Task</a>
-            </div>
-        </nav>
-        <div class="container">
-            <form method="get" id="addTask">
-             <div class="mb-3">
-                 <label for="" class="form-label">Task</label>
-                 <input
-                     type="text"
-                     class="form-control"
-                     name="text"
-                     id=""
-                     placeholder="Type your task here ..."
-                 />
-                 
-             </div>
-             <div class="mb-3">
-                 <label for="" class="form-label">Priority</label> <br>
-                 <button type="button" class="btn btn-outline-danger">High</button>
-                 <button type="button" class="btn btn-outline-warning">Medium</button>
-                 <button type="button" class="btn btn-success">Low</button>
-             </div>
-             <div class="float-end">
-                 <button type="submit" class="btn btn-secondary">Add</button>
-             </div>
-            </form>
-             
-         </div>
-    
-    </div>
-
-    
-    <script>
-
-        document.addEventListener('DOMContentLoaded', function() {
-            var openPopupBtn = document.getElementById('openPopupBtn');
-            var closePopupBtn = document.getElementById('closePopupBtn');
-            var overlay = document.getElementById('overlay');
-            var popup = document.getElementById('popup');
-
-            openPopupBtn.addEventListener('click', function(event) {
-                event.preventDefault(); 
-                event.stopPropagation(); 
-                popup.style.display = 'block';
-                overlay.style.display = 'block';
-            });
-
-            closePopupBtn.addEventListener('click', function(event) {
-                event.stopPropagation();
-                popup.style.display = 'none';
-                overlay.style.display = 'none';
-            });
-
-            overlay.addEventListener('click', function() {
-                popup.style.display = 'none';
-                overlay.style.display = 'none';
-            });
-
-            document.addEventListener('click', function(event) {
-                if (!popup.contains(event.target) && !openPopupBtn.contains(event.target)) {
-                    popup.style.display = 'none';
-                    overlay.style.display = 'none';
-                }
-            });
-        });
-
-    </script>
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/validation.js"></script>
-
-</body>
-
+  </body>
 </html>
